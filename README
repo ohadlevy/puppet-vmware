@@ -1,0 +1,41 @@
+# Copyright (c) 2009, Ohad Levy, ohadlevy@gmail.com
+# 
+# Permission to use, copy, modify, and/or distribute this software for any
+# purpose with or without fee is hereby granted, provided that the above
+# copyright notice and this permission notice appear in all copies.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+# WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+# MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+# ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+# WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+# ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+# OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+This module includes all services, packages and configuration information to install a VMWare server "freeware" version. 
+
+Tested on RH/CentOS 5.x, After installation, you should be able to access the server at https://servername:8333
+
+By default, VMWare server will create bridged interface, this means that the virtual clients would be on the same network as your physical server.
+
+If you require a special network setup (e.g. bonded, multiple nics / vlans etc) you should login as root and execute the vmware-config.pl script to modify your network setup.
+
+Note: you can also use the VMWare infrastructure client (ESX Version) with this version of VMWare server.
+
+
+Authentication
+
+LDAP authentication is supported, and by default root and members of the group vmware-users are allowed to manage the server, you may change it in the permission tab (or edit the authorization file)
+
+License
+
+You would need to put your own license file (as given from VMWare) in the files/etc/vmware directory.
+If you don't know how to create one, have a look on another vmware server or run the vmware-config.pl manually.
+
+You can use an old license file (from VMWare server 1.x) as well.
+
+ Local Data storage
+
+It is recommended to keep the virtual machines on a NFS share, you might want to add a mount of the 
+/var/lib/vmware directory to some NFS share.
+

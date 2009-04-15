@@ -1,0 +1,31 @@
+file /etc/vmware/locations
+answer BINDIR /usr/bin
+answer SBINDIR /usr/sbin
+answer LIBDIR /usr/lib/vmware
+answer DOCDIR /usr/share/doc/vmware
+answer MANDIR /usr/share/man
+answer INITDIR /etc/rc.d
+answer INITSCRIPTSDIR /etc/rc.d/init.d
+file /etc/vmware/not_configured 1238655995
+file /etc/rc.d/init.d/vmware 1238655995
+answer INSTALL_CYCLE yes
+file /etc/rc.d/init.d/vmware-mgmt
+file /etc/rc.d/init.d/vmware-core
+file /etc/rc.d/init.d/vmware-autostart
+answer EULA_AGREED yes
+answer BUILDR_vmmon yes
+answer HEADER_DIR /usr/src/linux/include
+answer BUILDR_vmnet yes
+answer NETWORKING yes
+answer VNET_0_INTERFACE eth0
+answer VNET_8_NAT no
+answer VMCI_CONFED yes
+answer VSOCK_CONFED yes
+answer VNET_0_NAME Bridged-0
+file /dev/vmnet0
+answer NETWORKING_SKIP_SETUP yes
+answer AUTHDPORT 902
+answer VMAUTHD_USE_LAUNCHER yes
+answer HTTP_PROXY_PORT 8222
+answer HTTPS_PROXY_PORT 8333
+remove_file /etc/vmware/not_configured
